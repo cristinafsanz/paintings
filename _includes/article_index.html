@@ -28,8 +28,8 @@
                     {% if post.featimg contains '.png'%}
                     {% assign thumb = post.featimg | replace: '.png', '' %}
                     <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/crops/450x253/{{ thumb | append: '-450x253.png' }}" alt="{{ thumb }}">
-                    {% elsif post.featimg contains '.jpg'%}
-                    {% assign thumb = post.featimg | replace: '.jpg', '' %}
+                    {% elsif (post.featimg contains '.JPG' or post.featimg contains '.jpg')%}
+                    {% assign thumb = post.featimg | replace: '.JPG', '' | replace: '.jpg', '' %}
                         <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/crops/450x253/{{ thumb | append: '-450x253.JPG' }}" alt="{{ thumb }}">
                     {% endif %}
                 </a>
@@ -41,8 +41,8 @@
                     {% if post.featimg contains '.png'%}
                     {% assign thumb = post.featimg | replace: '.png', '' %}
                     <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/crops/450x253/{{ thumb | append: '-450x253.png' }}" alt="{{ thumb }}">
-                    {% elsif post.featimg contains '.jpg'%}
-                    {% assign thumb = post.featimg | replace: '.jpg', '' %}
+                    {% elsif (post.featimg contains '.JPG' or post.featimg contains '.jpg')%}
+                    {% assign thumb = post.featimg | replace: '.JPG', '' | replace: '.jpg', '' %}
                         <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/crops/450x253/{{ thumb | append: '-450x253.JPG' }}" alt="{{ thumb }}">
                     {% endif %}
                 </a>
