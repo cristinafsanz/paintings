@@ -27,7 +27,7 @@
                             {% endif %}
                         {% elsif page.type == "image" or page.type == "gallery" %}
                             {% if page.featimg %}
-                                <img class="featimg" src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/{{ page.featimg }}" alt="{{ page.featimg }}">
+				<img class="featimg" src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/{{ page.featimg | replace: 'jpg', 'JPG'}}" alt="{{ page.featimg | replace: 'jpg', '' }}">
                             {% endif %}
                         {% elsif page.type == "audio" %}
                             {% if page.audio-embed %}
@@ -46,7 +46,7 @@
                         </div>
                         {% if page.type == "standard" %}
                             {% if page.featimg %}
-                                <img class="featimg" src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/{{ page.featimg }}" alt="{{ page.featimg }}">
+				<img class="featimg" src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/{{ page.featimg | replace: 'jpg', 'JPG'}}" alt="{{ page.featimg | replace: 'jpg', '' }}">
                             {% endif %}
                         {% endif %}
                         <div class="post-content">
