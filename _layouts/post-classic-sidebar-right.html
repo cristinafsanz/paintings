@@ -42,7 +42,7 @@
                         <div class="meta">
                             {% include author.html%} &bull;
                             <span class="date">
-                                Published on {{ page.date | date: '%B %d, %Y' }}
+                                {% include month_es.html inputDate=page.date %}
                             </span>
                         </div>
                         {% if page.type == "standard" %}
