@@ -2,7 +2,7 @@ full_rebuild: true
 name: Cuadros Pedro Luis
 description: Galería con cuadros pintados por Pedro Luis Fernández Peinado
 destination: jekyllbuild
-url: http://cristinafsanz.github.io/paintings/
+url: http://cristinafsanz.github.io
 baseurl: "/paintings"
 permalink: /:title/
 paginate: 8
