@@ -1,11 +1,11 @@
 ---
 layout: page-material-sidebar-right
-title: Archive
+title: Archivo
 ---
-#### by Month
+#### Por mes
 {% include monthly_archive.html %}
 
 <br/>
 
-#### by Year
+#### Por año
 {% include yearly_archive.html %}

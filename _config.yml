@@ -5,9 +5,9 @@ destination: jekyllbuild
 url: http://cristinafsanz.github.io
 baseurl: "/paintings"
 permalink: /:title/
-paginate: 8
+paginate: 9
 paginate_path: /page/:num/
-infinite_scroll: true #change to false if you want to use pagination
+infinite_scroll: false  #change to false if you want to use pagination
 gems: [jekyll-paginate]
 tag_dir: /tag
 category_dir: /category

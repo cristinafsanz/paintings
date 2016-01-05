@@ -50,7 +50,7 @@
 # Available _config.yml settings :
 # - category_dir:          The subfolder to build category pages in (default is 'categories').
 # - category_title_prefix: The string used before the category name in the page title (default is
-#                          'Category: ').
+#                          'Categoría: ').
 module Jekyll
 
   # The CategoryIndex class creates a single category page for the specified category.
@@ -79,10 +79,10 @@ module Jekyll
         self.read_yaml(template_dir, template)
         self.data['category']    = category
         # Set the title for this page.
-        title_prefix             = site.config['category_title_prefix'] || 'Category: '
+        title_prefix             = site.config['category_title_prefix'] || 'Categoría: '
         self.data['title']       = "#{title_prefix}#{category}"
         # Set the meta-description for this page.
-        meta_description_prefix  = site.config['category_meta_description_prefix'] || 'Category: '
+        meta_description_prefix  = site.config['category_meta_description_prefix'] || 'Categoría: '
         self.data['description'] = "#{meta_description_prefix}#{category}"
       else
         @perform_render = false
