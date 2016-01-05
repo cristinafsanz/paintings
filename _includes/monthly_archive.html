@@ -2,12 +2,12 @@
  <ul class="archive">
   {% for post in site.posts %}
     {% unless post.next %}
-        <h5>{{ post.date | date: '%B' }}</h5>
+        <h5>{% include only_month_es.html inputDate=post.date %}</h5>
     {% else %}
-        {% capture month %}{{ post.date | date: '%B' }}{% endcapture %}
-        {% capture nmonth %}{{ post.next.date | date: '%B' }}{% endcapture %}
+	{% capture month %}{{ post.date | date: '%B' }}{% endcapture %}
+	{% capture nmonth %}{{ post.next.date | date: '%B' }}{% endcapture %}
         {% if month != nmonth %}
-            <h5>{{ post.date | date: '%B' }}</h5>
+            <h5>{% include only_month_es.html inputDate=post.date %}</h5>
         {% endif %}
     {% endunless %}
     <li><span class="date">{{ post.date | date:"%d." }}</span> <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}">{{ post.title }}</a></li>
