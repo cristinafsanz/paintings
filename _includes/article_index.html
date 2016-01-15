@@ -48,9 +48,6 @@
                 </a>
         {% endif %}
     {% endif %}
-    <span class="date">
-        {% include month_es.html inputDate=post.date %}
-    </span>
     <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}">
         <h1>{{ post.title }}</h1>
     </a>
